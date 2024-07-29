@@ -6,7 +6,7 @@
 #    By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/07/22 16:23:26 by ivotints          #+#    #+#              #
-#    Updated: 2024/07/28 22:32:36 by ivotints         ###   ########.fr        #
+#    Updated: 2024/07/29 21:51:18 by ivotints         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,16 +27,13 @@ SRCS	= 00main.c 01init_minienv.c 02minishell.c 03signal_handler.c \
 		33minienv_to_envp.c 34split_commands.c 35multiple_commands.c \
 		36handle_pipe.c 37handle_child_redir.c 38execute_fork_cmd.c \
 		39print_error_msg.c 40wait_for_children.c
-
-
-
-LIBFT_A	= ./libft/libft.a
-HEADER	= minishell.h
+		
+LIBFT_A	= libft/libft.a
 
 all: $(NAME)
 
-$(OBJ_DIR)/%.o: %.c $(HEADER)
-	@$(CC) $(CFLAGS) -c $< -o $@ $(INCLUDE)
+$(OBJ_DIR)/%.o: %.c
+	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(LIBFT_A) $(OBJ_DIR) $(OBJS)
 	@$(CC) $(CFLAGS) $(OBJS) -o $(NAME) $(LDLIBS) $(LDFLAGS)
