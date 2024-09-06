@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 16:01:20 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 18:05:40 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:13:36 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	print_perror_msg(char *command, char *perror_msg)
 	ft_putstr_fd(": ", 2);
 	perror(perror_msg);
 }
-
-
 
 void	close_extra_fds(void)
 {

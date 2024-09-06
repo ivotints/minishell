@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 20:14:52 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/24 20:54:31 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:26:58 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	empty_pipe(char *input)
 	if (*next_pipe == '|')
 		return (syntax_error("|"));
 	if (*next_pipe == '\0')
-		return (ft_putstr_fd("minishell: unclosed pipeline detected\n", 2), TRUE);
+		return (ft_putstr_fd(
+				"minishell: unclosed pipeline detected\n", 2), TRUE);
 	return (empty_pipe(next_pipe));
 }

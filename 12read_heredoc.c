@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/26 21:22:48 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 21:27:16 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:16:00 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,6 @@ static void	expand_variables(char **input, char *var_pos, t_env *minienv)
 	var_pos[0] = '\0';
 	insert_string(input, var_value, var_pos + l + 1);
 }
-
 
 //Return pointer to a $ or to the end
 char	*var_position(char *s)

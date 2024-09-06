@@ -6,13 +6,14 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 15:54:38 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 18:14:59 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:24:14 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minishell.h"
 
-static void	ft_strlncat(char *dest, const char *src, const char *end, size_t size)
+static void	ft_strlncat(char *dest, const char *src,
+		const char *end, size_t size)
 {
 	size_t	i;
 	size_t	j;
@@ -64,9 +65,9 @@ char	*prompt_input(t_env *minienv)
 {
 	char	*input;
 
-	input = readline(get_prompt_str(minienv)); // or just "minishell$ "
+	input = readline(get_prompt_str(minienv));
 	if (!input)
-		builtin_exit(NULL, &minienv); // to manage Ctrl D
+		builtin_exit(NULL, &minienv);
 	if (*input)
 		add_history(input);
 	return (input);

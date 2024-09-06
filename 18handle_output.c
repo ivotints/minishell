@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:55:32 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 21:11:43 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:15:07 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,7 @@ int	redirect_output(char *command)
 		return (FAILED);
 	}
 	else
-		redirect_fd(fd, 1); //now everything we write to STDOUT (1) we write to a file
+		redirect_fd(fd, 1);
 	free(file_name);
 	return (SUCCESS);
 }

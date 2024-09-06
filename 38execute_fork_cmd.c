@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   38execute_fork_cmd.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/28 02:09:54 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 20:35:36 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:12:50 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/05 17:12:53 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	execute_fork_cmd(char *command, char **commands, t_env **minienv)
 	close_extra_fds();
 	av = split_av(command);
 	free_array(commands);
-	
 	if (is_builtin(av[0]))
 		execute_forked_builtin(av, minienv);
 	else

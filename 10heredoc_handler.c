@@ -57,7 +57,7 @@ char	*get_delimiter(char *delim_pos)
 
 	delete_char(delim_pos, 1);
 	if (*delim_pos == '>')
-		delete_char(delim_pos, 1); // it is for redirectung >> output
+		delete_char(delim_pos, 1);
 	while (*delim_pos == ' ')
 		delete_char(delim_pos, 1);
 	len = delimiter_len(delim_pos);
@@ -84,12 +84,12 @@ int	heredoc_handler(char *input, int *exit_status, t_env *minienv)
 	char		*heredoc_pos;
 	char		*delimiter;
 
-	heredoc_pos = get_heredoc_pos(input);//<< e
+	heredoc_pos = get_heredoc_pos(input);
 	if (!heredoc_pos)
 		return (SUCCESS);
-	*heredoc_pos = 1; //1< e
-	heredoc_pos++; //< e
-	delimiter = get_delimiter(heredoc_pos); //e
+	*heredoc_pos = 1;
+	heredoc_pos++;
+	delimiter = get_delimiter(heredoc_pos);
 	if (!exec_heredoc(delimiter, exit_status, minienv, input))
 	{
 		free(delimiter);

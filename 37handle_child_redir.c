@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   37handle_child_redir.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/28 02:02:17 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 21:12:25 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:32:51 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/05 17:32:54 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,6 @@ void	quit_child(char **commands, t_env **minienv)
 	close_all_fds();
 	exit(EXIT_FAILURE);
 }
-
 
 void	handle_child_redir(char *command, char **commands, t_env **minienv)
 {

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 18:40:04 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 21:52:24 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:28:11 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/06 11:22:28 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,4 +55,3 @@ int	is_builtin(char *cmd)
 		return (TRUE);
 	return (FALSE);
 }
-

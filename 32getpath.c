@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 23:13:54 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/27 23:20:09 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:30:52 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/05 18:22:28 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,8 @@ char	*get_path(char *command, t_env *minienv)
 	if (is_path(command))
 		return (local_path(command, minienv));
 	path_env = minienv_value("PATH", minienv);
+	if (path_env == NULL)
+		return (NULL);
 	paths = ft_split(path_env, ':');
 	paths_start = paths;
 	while (paths && *paths)

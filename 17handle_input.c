@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/27 15:53:59 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 21:11:36 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:23:20 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	redirect_input(char *input)
 	input_redirect = get_redirect_position(input, '<');
 	if (!*input_redirect)
 		return (SUCCESS);
-	file_name = get_delimiter(input_redirect); //return us name of file
+	file_name = get_delimiter(input_redirect);
 	fd = open(file_name, O_RDONLY, FD_CLOEXEC);
 	if (fd == -1)
 	{
@@ -49,7 +49,7 @@ int	redirect_input(char *input)
 		return (FAILED);
 	}
 	else
-		redirect_fd(fd, 0); //now everything we read from STDIN (0) we read from a file
+		redirect_fd(fd, 0);
 	free(file_name);
 	return (SUCCESS);
 }

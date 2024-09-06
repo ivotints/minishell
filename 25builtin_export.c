@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   25builtin_export.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 20:17:22 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/27 20:52:08 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:16:15 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/05 17:16:54 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ char	*name_only(char *key_pair)
 
 static int	declare_env(t_env *minienv)
 {
-	char *name;
+	char	*name;
 
 	while (minienv)
 	{
@@ -94,4 +94,3 @@ int	builtin_export(char **av, t_env **minienv)
 	}
 	return (exit_status);
 }
-

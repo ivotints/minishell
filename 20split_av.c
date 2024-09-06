@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   20split_av.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/27 16:05:43 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 20:34:01 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:27:54 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/05 17:28:00 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,5 +88,3 @@ char	**split_av(char *input)
 	restore_spaces(av);
 	return (av);
 }
-
-

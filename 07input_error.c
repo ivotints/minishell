@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 18:08:13 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/24 22:37:22 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:27:26 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	unclosed_quotes(char *input)
 			last_opened = *input;
 		input++;
 	}
-	while(*input && last_opened)
+	while (*input && last_opened)
 	{
 		if (*input && *input == last_opened)
 			last_opened = 0;

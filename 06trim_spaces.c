@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 16:15:59 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 17:15:34 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/05 17:17:28 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ char	*trim_spaces_no_free(char *input)
 		i--;
 	result = malloc(sizeof(char) * (i + 1));
 	if (!result)
-		return(NULL);
+		return (NULL);
 	result[i] = '\0';
 	while (i--)
 		result[i] = input[i];

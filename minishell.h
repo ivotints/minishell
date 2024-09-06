@@ -76,7 +76,7 @@ t_env	*minienv_node(char *name, t_env *minienv);
 
 // 02minishell.c
 
-int	minishell(t_env *minienv);
+int		minishell(t_env *minienv);
 
 // 03signal_handler.c
 
@@ -101,37 +101,38 @@ void	free_array(char **av);
 
 // 07input_error.c
 
-int	input_error(char *input, int *exit_status, t_env *minienv);
-int	unclosed_quotes(char *input);
-int	pipe_start(char *input);
-int	syntax_error(char *token);
+int		input_error(char *input, int *exit_status, t_env *minienv);
+int		unclosed_quotes(char *input);
+int		pipe_start(char *input);
+int		syntax_error(char *token);
 
 // 08redirect_error.c
 
-int	redirect_error(char *input);
-int	unexpected_token(char *input);
+int		redirect_error(char *input);
+int		unexpected_token(char *input);
 char	*get_rposition(char *str);
 char	*skip_quotes(char *str);
 
 // 09empty_pipe.c
 
-int	empty_pipe(char *input);
+int		empty_pipe(char *input);
 char	*get_next_pipe(char *str);
 
 // 10heredoc_handler.c
 
-int	heredoc_handler(char *input, int *exit_status, t_env *minienv);
+int		heredoc_handler(char *input, int *exit_status, t_env *minienv);
 char	*get_heredoc_pos(char *str);
 char	*get_delimiter(char *delim_pos);
 void	delete_char(char *str, int len);
-int	delimiter_len(char *s);
+int		delimiter_len(char *s);
 
 // 11exec_heredoc.c
 
-int	exec_heredoc(char *delimiter, int *exit_status, t_env *minienv, char *input);
+int		exec_heredoc(char *delimiter, int *exit_status,
+			t_env *minienv, char *input);
 void	define_heredoc_signals(int child_pid);
-int	wait_for_child(int child_pid, int is_last_child);
-int	handle_signal_interrupt(int status, int is_last_child);
+int		wait_for_child(int child_pid, int is_last_child);
+int		handle_signal_interrupt(int status, int is_last_child);
 
 // 12read_heredoc.c
 
@@ -142,34 +143,34 @@ void	insert_string(char **input, char *var_value, char *rest_str);
 
 // 13expand_input.c
 
-void	expand_input(char **input, t_env *minienv, int	exit_status);
+void	expand_input(char **input, t_env *minienv, int exit_status);
 
 // 14has_pipe.c
 
-int	has_pipe(char *str);
+int		has_pipe(char *str);
 
 // 15one_command.c
 
-int	one_command(char *input, t_env **minienv);
+int		one_command(char *input, t_env **minienv);
 
 // 16handle_redirects.c
 
-int	handle_redirects(char *input, int original_fds[2]);
+int		handle_redirects(char *input, int original_fds[2]);
 void	restore_original_fds(int original_fds[2]);
 
 // 17handle_input.c
 
-int	handle_input(char *input, int original_fds[2]);
+int		handle_input(char *input, int original_fds[2]);
 void	save_original_fd_in(int original_fds[2]);
-int	redirect_input(char *input);
+int		redirect_input(char *input);
 char	*get_redirect_position(char *str, char redirect_char);
 void	redirect_fd(int fd_to_redirect, int fd_location);
 
 // 18handle_output.c
 
-int	handle_output(char *command, int original_fds[2]);
+int		handle_output(char *command, int original_fds[2]);
 void	save_original_fd_out(int original_fds[2]);
-int	redirect_output(char *command);
+int		redirect_output(char *command);
 
 // 19redirect_heredoc.c
 
@@ -181,29 +182,28 @@ char	**split_av(char *input);
 
 // 21is_builtin.c
 
-int	is_builtin(char *cmd);
-int	execute_builtin(char **av, t_env **minienv);
-int	equal(char *str1, char *str2);
+int		is_builtin(char *cmd);
+int		execute_builtin(char **av, t_env **minienv);
+int		equal(char *str1, char *str2);
 
 // 22echo.c
 
-int	echo(char **av);
+int		echo(char **av);
 
 // 23pwd.c
 
-int	pwd(void);
+int		pwd(void);
 
 // 24env.c
 
-int	env(t_env *minienv);
+int		env(t_env *minienv);
 
 // 25builtin_export.c
 
-int	builtin_export(char **av, t_env **minienv);
+int		builtin_export(char **av, t_env **minienv);
 char	*name_only(char *key_pair);
-int	is_valid_varname(char *name);
+int		is_valid_varname(char *name);
 void	print_varname_error_msg(char *command, char *varname);
-
 
 // 26minienv_update.c
 
@@ -212,26 +212,26 @@ char	*create_keypair(char *name, char *value);
 
 // 27unset.c
 
-int	unset(char **av, t_env **minienv);
+int		unset(char **av, t_env **minienv);
 
 // 28cd.c
 
-int	cd(char **av, t_env *minienv);
+int		cd(char **av, t_env *minienv);
 
 // 29builtin_exit.c
 
-int	builtin_exit(char **args, t_env **minienv);
+int		builtin_exit(char **args, t_env **minienv);
 void	exit_with_error(char *command, char *msg, int error);
 
 // 30exec_fork_extern.c
 
-int	exec_fork_extern(char **av, t_env *minienv);
+int		exec_fork_extern(char **av, t_env *minienv);
 void	define_execute_signals(int child_pid);
 
 // 31execute_external.c
 
-int	execute_external(char **av, t_env *minienv);
-int	is_empty(char *str);
+int		execute_external(char **av, t_env *minienv);
+int		is_empty(char *str);
 void	external_exit(char **av, t_env *minienv, int exit_status);
 
 // 32getpath.c
@@ -241,7 +241,7 @@ char	*get_path(char *command, t_env *minienv);
 // 33minienv_to_envp.c
 
 char	**minienv_to_envp(t_env *minienv);
-int	minienv_size(t_env *minienv);
+int		minienv_size(t_env *minienv);
 
 // 34split_commands.c
 
@@ -249,9 +249,9 @@ char	**split_commands(char *input);
 
 // 35multiple_commands.c
 
-int	multiple_commands(char **commands, t_env **minienv);
-int	*init_children_pid(char **commands);
-int	arr_len(char **arr);
+int		multiple_commands(char **commands, t_env **minienv);
+int		*init_children_pid(char **commands);
+int		arr_len(char **arr);
 
 // 36handle_pipe.c
 
@@ -265,7 +265,7 @@ void	quit_child(char **commands, t_env **minienv);
 // 38execute_fork_cmd.c
 
 void	execute_fork_cmd(char *command, char **commands, t_env **minienv);
-int	execute_forked_builtin(char **args, t_env **minienv);
+int		execute_forked_builtin(char **args, t_env **minienv);
 
 // 39print_error_msg.c
 
@@ -273,11 +273,7 @@ void	print_error_msg(char *command, char *msg);
 
 // 40wait_for_children.c
 
-int	wait_for_children(int children_pid[1024]);
-
-
-
-
+int		wait_for_children(int children_pid[1024]);
 
 //try to put it into bash and in to minishell.
 //e'cho'  'df""' "$SHE""LL"  "$SHE" "LL|" '$SHELL'|'cat'>$VTE_VERSION

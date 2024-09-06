@@ -92,4 +92,3 @@ t_env	*init_minienv(char **environ)
 	free(home);
 	return (minienv);
 }
-

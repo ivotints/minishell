@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   35multiple_commands.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
+/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/07/28 01:07:56 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 20:14:37 by ivotints         ###   ########.fr       */
+/*   Created: 2024/09/05 17:21:50 by rludvik           #+#    #+#             */
+/*   Updated: 2024/09/05 17:21:51 by rludvik          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,9 @@ int	arr_len(char **arr)
 int	*init_children_pid(char **commands)
 {
 	int		*children_pid;
-	int	size;
+	int		size;
 
-	size = sizeof(int) * (arr_len(commands) + 1); //+ 1 may be not needed
+	size = sizeof(int) * (arr_len(commands) + 1);
 	children_pid = malloc(size);
 	if (!children_pid)
 		return (NULL);
