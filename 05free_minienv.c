@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 16:01:20 by ivotints          #+#    #+#             */
-/*   Updated: 2024/09/05 17:13:36 by rludvik          ###   ########.fr       */
+/*   Updated: 2024/09/17 19:12:10 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,7 @@ void	close_extra_fds(void)
 	while (last_open_fd > 2)
 		close(last_open_fd--);
 }
-//	if (last_open_fd == -1)
-//		print_perror_msg("open", "/tmp/last_fd");
+
 
 void	close_all_fds(void)
 {

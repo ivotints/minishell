@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 22:48:44 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/28 17:14:54 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/17 19:12:22 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,6 @@
 # include <sys/stat.h> // stat
 # include <signal.h> // sigaction
 # include <fcntl.h> // open flags
-
-# include <string.h> //DELETE AFTER ALL TESTS!!!
 
 typedef struct s_env
 {

@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/24 01:03:43 by ivotints          #+#    #+#             */
-/*   Updated: 2024/07/27 20:51:46 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/17 19:12:56 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ t_env	*init_minienv(char **environ)
 	i = 0;
 	while (environ[i])
 		minienv_add(environ[i++], &minienv);
-	if (!minienv_node("Olist_appendLDPWD", minienv))
+	if (!minienv_node("OLDPWD", minienv))
 		minienv_add("OLDPWD", &minienv);
 	home = ft_strjoin("__HOME=", minienv_value("HOME", minienv));
 	minienv_add(home, &minienv);
