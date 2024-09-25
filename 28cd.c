@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   28cd.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:30:12 by rludvik           #+#    #+#             */
-/*   Updated: 2024/09/05 17:30:15 by rludvik          ###   ########.fr       */
+/*   Updated: 2024/09/25 18:23:59 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	cd(char **av, t_env *minienv)
 		path = av[1];
 	else
 		path = minienv_value("__HOME", minienv);
-	if (chdir(path) != 0)
+	if (path && chdir(path) != 0)
 	{
 		print_perror_msg("cd", av[1]);
 		return (EXIT_FAILURE);
