@@ -6,7 +6,7 @@
 /*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/07/19 22:48:44 by ivotints          #+#    #+#             */
-/*   Updated: 2024/09/17 19:12:22 by ivotints         ###   ########.fr       */
+/*   Updated: 2024/09/26 18:37:13 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -228,7 +228,7 @@ void	define_execute_signals(int child_pid);
 
 // 31execute_external.c
 
-int		execute_external(char **av, t_env *minienv);
+void	execute_external(char **av, t_env *minienv);
 int		is_empty(char *str);
 void	external_exit(char **av, t_env *minienv, int exit_status);
 

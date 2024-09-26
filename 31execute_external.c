@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   31execute_external.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rludvik <marvin@42.fr>                     +#+  +:+       +#+        */
+/*   By: ivotints <ivotints@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/05 17:30:40 by rludvik           #+#    #+#             */
-/*   Updated: 2024/09/05 17:30:42 by rludvik          ###   ########.fr       */
+/*   Updated: 2024/09/26 18:39:40 by ivotints         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ int	is_empty(char *str)
 	return (1);
 }
 
-int	execute_external(char **av, t_env *minienv)
+void	execute_external(char **av, t_env *minienv)
 {
 	char	*path;
 	char	**envp;
@@ -92,5 +92,4 @@ int	execute_external(char **av, t_env *minienv)
 	free_minienv(&minienv);
 	if (execve(path, av, envp) == -1)
 		handle_execve_errors(av, path, envp);
-	exit(EXIT_SUCCESS);
 }
