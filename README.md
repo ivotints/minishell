@@ -6,10 +6,8 @@
 
 This shell supports essential features like command execution, redirections, pipelines, built-in commands, and signal handling, making it a valuable learning experience for understanding the inner workings of Unix-like systems.
 
---
-##📽️ Demo
+## 📽️ Demo
 ![Minishell Demo](./assets/minishell.gif)
---
 
 ## Features
 - Customizable command prompt
